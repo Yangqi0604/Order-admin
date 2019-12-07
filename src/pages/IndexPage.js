@@ -13,11 +13,12 @@ import Register from './User/register'
 import { Layout } from 'antd'
 const { Header, Content } = Layout
 
-function IndexPage() {
+function IndexPage(props) {
+  // console.log(props)
   return (
     <Layout className={styles.layout}>
       <Header className={styles.header}>
-        <NavBar />
+        <NavBar {...props}/>
       </Header>
       <Content className={styles.content}>
         {/*一级路由*/}
