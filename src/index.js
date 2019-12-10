@@ -4,6 +4,8 @@ import './index.css';
 // 1. Initialize
 const app = dva();
 
+
+console.log('index.js')
 // 2. Plugins
 // app.use({});
 
