@@ -6,7 +6,7 @@ import style from "./index.scss"
 export default class index extends Component {
 	
 	constructor(props) { 
-		console.log(props)
+		// console.log(props)
 		super(props);
 		this.state = {
 			selectedKeys: []
@@ -33,12 +33,13 @@ export default class index extends Component {
 		// 根据/把路由地址分割
 		const temp = pathname.split('/');
 		//如果数组长度小于，表示只有根路径，设置为Home，否则取数组中第二个值
-		const key = temp && temp.length < 2 ? "home" : "temp[1]";
+		const key = temp && temp.length < 2 ? "home" : temp[1];
 		this.setState({
 			selectedKeys:[key]
 		})
 	}
 	render() {
+		// console.log(this.state.selectedKeys)
 		return (
 			<nav className={style.header}>
 				<a className={style.logo} href="">
