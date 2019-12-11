@@ -6,7 +6,7 @@ import style from "./index.scss"
 export default class index extends Component {
 	
 	constructor(props) { 
-		console.log(props)
+		// console.log(props)
 		super(props);
 		this.state = {
 			selectedKeys: []
