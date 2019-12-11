@@ -1,52 +1,5 @@
 import React from 'react';
 import { Router, Switch } from 'dva/router';
-<<<<<<< HEAD
-import IndexPage from './pages/IndexPage';
-import SubRoutes from './utils/SubRoutes'
-
-import Home from "./pages/Home"
-import Menus from "./pages/Menus"
-import Admin from "./pages/Admin"
-import About from "./pages/About"
-import Login from "./pages/User/login"
-import Register from "././pages/User/register"
-
-
-const RouteConfig = [
-  {
-    path: '/',
-    component: IndexPage,
-    routes: [
-      {
-        path: '/',
-        component: Home,
-        redirect:true
-      },
-      {
-        path: '/menus',
-        component: Menus,
-      },
-      {
-        path: '/admin',
-        component: Admin,
-      },
-      {
-        path: '/about',
-        component: About,
-      },
-      {
-        path: '/login',
-        component: Login,
-      },
-      {
-        path: '/register',
-        component: Register,
-      }
-    ]
-  }
-];
-
-=======
 // import IndexPage from './pages/IndexPage';
 // import Home from './pages/Home'
 // import Menus from './pages/Menus'
@@ -93,7 +46,6 @@ const Routeconfig = [
         component: () => import('./pages/User/register'),
         model: [],
       }
->>>>>>> 411fdaa7a0fb54fd822b8203bca44fc7ed53806d
 
     ]
   }
@@ -105,14 +57,6 @@ function RouterConfig({ history, app }) {
   return (
     <Router history={history}>
       <Switch>
-<<<<<<< HEAD
-        {/*<Route path="/"  component={IndexPage} />*/}
-        {
-          RouteConfig.map((route, i) => (
-            //写圆括号，调用封装组件
-            <SubRoutes key={i} {...route} />
-          )) 
-=======
         {/* <Route path="/"  component={IndexPage} /> */}
         {
           Routeconfig.map((route, i) => (
@@ -120,7 +64,6 @@ function RouterConfig({ history, app }) {
             //调用封装组件
             <SubRoutes key={i} {...route} app={app} />
           ))
->>>>>>> 411fdaa7a0fb54fd822b8203bca44fc7ed53806d
         }
       </Switch>
     </Router>

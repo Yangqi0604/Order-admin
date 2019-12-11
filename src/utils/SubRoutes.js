@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-import { Route } from 'dva/router'
-
-
-export default function SubRoutes(route) {
-    console.log(route)
-    return (
-        <Route
-            render={props => <route.component {...props} routes={route.routes}/>}
-        />
-    )
-}
-=======
 import React from 'react';
 import { Route, Redirect } from 'dva/router';
 import dynamic from 'dva/dynamic';
@@ -65,4 +51,3 @@ export function RedirectRoute({ routes, from, exact }) {
 export function NoMatchRoute({ status=404 }) { 
     return <Route render={props => <NoMatch {...props} status={status}/> } />
 }
->>>>>>> 411fdaa7a0fb54fd822b8203bca44fc7ed53806d
