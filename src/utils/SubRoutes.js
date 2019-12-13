@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Redirect } from 'dva/router';
 import dynamic from 'dva/dynamic';
 import NoMatch from '../components/NoMatch';
+
 // export default function SubRoutes(route) {
 //     console.log(route)
 //     return (
