@@ -15,7 +15,7 @@ const dynamicCom = (app, models, component, routes) =>
     dynamic({
     app,
     models:() => models,
-        component:()=>
+        component:()=>   
             component().then(res => { 
                 // console.log(res)
                 const Component = res.default || res;
