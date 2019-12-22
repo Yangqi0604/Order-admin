@@ -45,7 +45,7 @@ function IndexPage(props) {
             则默认第一个路由为重定向路由
             <Redirect exact from={'/'} to={routes[0].path} />
           */}
-          <RedirectRoute exact={true} from='/' routes={routes} />
+          <RedirectRoute exact={true} from={'/'} routes={routes} />
           {/* 输入的链接不存在时 ,跳转到NoMatch组件中*/}
           <NoMatchRoute />
         </Switch>

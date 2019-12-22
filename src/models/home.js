@@ -4,7 +4,9 @@ export default {
     namespace: 'home',
   
     state: {
-        text:'this is the home component'
+        user:null,
+        pwd: null,
+        
     },
   
     subscriptions: {
